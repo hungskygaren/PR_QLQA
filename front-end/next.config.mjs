@@ -3,15 +3,19 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: 'localhost',
-        pathname: '/**'
+        hostname: "https://pr-qlqa.onrender.com/",
+        pathname: "/**",
       },
       {
-        hostname: 'via.placeholder.com',
-        pathname: '/**'
-      }
-    ]
-  }
-}
+        hostname: "localhost",
+        pathname: "/**",
+      },
+      {
+        hostname: "via.placeholder.com",
+        pathname: "/**",
+      },
+    ],
+  },
+};
 
-export default nextConfig
+export default nextConfig;
