@@ -3,7 +3,7 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: "pr-qlqa.vercel.app",
+        hostname: "https://pr-qlqa.onrender.com",
         pathname: "/**",
       },
       {
