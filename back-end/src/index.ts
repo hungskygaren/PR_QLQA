@@ -49,7 +49,8 @@ const start = async () => {
     fastify.register(errorHandlerPlugin)
     fastify.register(fastifySocketIO, {
       cors: {
-        origin: 'http://localhost:3000'
+        origin: 'https://pr-qlqa.vercel.app/'
+        // origin: 'http://localhost:3000'
       }
     })
     fastify.register(socketPlugin)
