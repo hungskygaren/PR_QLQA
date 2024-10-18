@@ -32,7 +32,7 @@ import {
 import { FastifyInstance, FastifyPluginOptions } from 'fastify'
 
 export default async function orderRoutes(fastify: FastifyInstance, options: FastifyPluginOptions) {
-  // fastify.addHook('preValidation', fastify.auth([requireLoginedHook]))
+  fastify.addHook('preValidation', fastify.auth([requireLoginedHook]))
   fastify.post<{ Reply: CreateOrdersResType; Body: CreateOrdersBodyType }>(
     '/',
     {
@@ -66,8 +66,8 @@ export default async function orderRoutes(fastify: FastifyInstance, options: Fas
       schema: {
         response: {
           200: GetOrdersRes
-        }
-        // querystring: GetOrdersQueryParams
+        },
+        querystring: GetOrdersQueryParams
       }
       // preValidation: fastify.auth([requireOwnerHook])
     },

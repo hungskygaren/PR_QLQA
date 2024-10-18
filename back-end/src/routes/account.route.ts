@@ -216,8 +216,8 @@ export default async function accountRoutes(fastify: FastifyInstance, options: F
           200: CreateGuestRes
         },
         body: CreateGuestBody
-      },
-      preValidation: fastify.auth([requireOwnerHook])
+      }
+      // preValidation: fastify.auth([requireOwnerHook])
     },
     async (request, reply) => {
       const result = await createGuestController(request.body)
@@ -235,8 +235,8 @@ export default async function accountRoutes(fastify: FastifyInstance, options: F
           200: GetListGuestsRes
         },
         querystring: GetGuestListQueryParams
-      },
-      preValidation: fastify.auth([requireOwnerHook])
+      }
+      // preValidation: fastify.auth([requireOwnerHook])
     },
     async (request, reply) => {
       const result = await getGuestList({
